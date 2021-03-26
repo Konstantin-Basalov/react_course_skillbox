@@ -26,6 +26,8 @@
   "homepage": "https://github.com/Konstantin-Basalov/react_course_skillbox#readme",
   "dependencies": {
     "env": "0.0.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -38,6 +40,7 @@
     "webpack": "^5.28.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2",
+    "webpack-node-externals": "^2.5.2",
     "webpack-serve": "^3.2.0"
   }
 }

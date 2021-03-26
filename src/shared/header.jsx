@@ -4,8 +4,9 @@ export function Header() {
     return (
         <div>
             <h1>SkillBox Course "React"</h1>
-            <p>тут будет текст, но потом</p>
+            <p>Content will here</p>
         </div>
+
     )
 }
 
