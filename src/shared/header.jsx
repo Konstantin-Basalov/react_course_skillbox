@@ -1,12 +1,15 @@
+import {hot} from 'react-hot-loader/root'
 import * as React from 'react';
 
-export function Header() {
+function HeaderComponent() {
     return (
         <div>
             <h1>SkillBox Course "React"</h1>
-            <p>Content will here</p>
+            <p>New text here</p>
         </div>
 
     )
 }
+
+export const Header = hot(HeaderComponent)
 
