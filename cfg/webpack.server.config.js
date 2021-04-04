@@ -16,10 +16,28 @@ module.exports = {
     },
     externals: [nodeExternals()],
     module: {
-        rules: [{
-            test: /\.[tj]sx?$/,
-            use: ['ts-loader']
-        }
+        rules: [
+            {
+                test: /\.[tj]sx?$/,
+                use: ['ts-loader']
+            },
+            {
+                test: /\.css$/,
+                // use: ['style-loader', 'css-loader'] // для добавления стилей глобально
+                use: [
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: {
+                                mode: 'local',
+                                localIdentName: '[name]__[local]--[hash:base64:5]',
+                                exportOnlyLocals: true,
+                            },
+
+                        }
+                    }
+                ]
+            }
         ]
     },
     optimization: {
