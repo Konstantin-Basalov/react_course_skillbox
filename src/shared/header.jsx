@@ -6,7 +6,7 @@ function HeaderComponent() {
     return (
         <div>
             <h1 className={styles.example}>Hello React</h1>
-            <p className={styles.style__second}>Home Work</p>
+            <p className={styles.style__second}>Home Work on webpack V5</p>
         </div>
 
     )

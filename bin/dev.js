@@ -14,10 +14,10 @@ const clientCompiler = webpack(webpackClientConfig);
 hmrServer.use(webpackDevMiddleware(clientCompiler, {
     publicPath: webpackClientConfig.output.publicPath,
     serverSideRender: true,
-    noInfo: true,
-    watchOptions: {
-        ignore: /dist/,
-    },
+    // noInfo: true,
+    // watchOptions: {
+    //     ignore: /dist/,
+    // },
     writeToDisk: true,
     stats: 'errors-only'
 }));
@@ -34,10 +34,10 @@ hmrServer.listen(3001, () => {
 
 const compiler = webpack(webpackServerConfig);
 
-compiler.run((err) => {
-    if (err) {
-        console.log('Compilation failed: ', err)
-    }
+// compiler.run((err) => {
+//     if (err) {
+//         console.log('Compilation failed: ', err)
+//     }
 
     compiler.watch({}, (err) => {
         if (err) {
@@ -53,5 +53,5 @@ compiler.run((err) => {
             path.resolve(__dirname, '../dist/client')
         ]
     });
-});
+// });
 
