@@ -1,6 +1,6 @@
 // 1.
 import React, {Component} from "react";
-import {Hooks} from "html-webpack-plugin";
+
 
 function concatFunc(first: string, second: string): string {
     return first.concat(" ", second)
@@ -79,6 +79,6 @@ function HomeComponent(props: IProps) {
     )
 }
 
-type TMyType<T> = T extends ((...args: infer R) => any) ? React.ElementType<R> : never
+type TMyType<T> = T extends ((...args: infer R) => any) ? React.ElementType<R> : never;
 
-type t = TMyType<typeof HomeComponent>
+type t = TMyType<typeof HomeComponent>;
