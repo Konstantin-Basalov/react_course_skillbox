@@ -10,6 +10,57 @@
     margin: 0 0 38px;
 }
 
+.search_container {
+    display: block;
+    position: relative;
+}
+
+.search_container svg {
+    position: absolute;
+    left: 16px;
+    top: 9px;
+}
+
+.search {
+    width: 192px;
+    padding: 8px 13px 8px 31px;
+    border-radius: 30px;
+    font-size: 12px;
+    border: none;
+    background-color: var(--grayF4);
+    outline: none;
+}
+
+.user_avatar {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.messages {
+    display: flex;
+    width: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.messages_counter {
+    display: flex;
+    width: 12.77px;
+    height: 12.77px;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--orange);
+    border-radius: 50%;
+}
+
 @media all and (min-width: 1024px) {
     .searchBlock {
         padding: 0;

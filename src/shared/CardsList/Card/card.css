@@ -1,0 +1,43 @@
+.card {
+    position: relative;
+    background-color: var(--white);
+    margin-bottom: 20px;
+    border-radius: 7px;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.card > * {
+    flex: 1 1 100%;
+}
+
+button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+@media all and (min-width: 768px) {
+    .card {
+        padding: 0 40px;
+        margin-bottom: 40px;
+        max-height: 107px;
+        flex-flow: row nowrap;
+    }
+
+    .card > * {
+        flex: auto;
+    }
+}
+
+@media all and (min-width: 1400px) {
+    .card {
+        padding: 0 57px 0 60px;
+
+    }
+
+}

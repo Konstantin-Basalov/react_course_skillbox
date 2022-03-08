@@ -1,0 +1,34 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    right: 13px;
+    top: 17px;
+}
+
+@media all and (min-width: 768px) {
+    .menu {
+        right: 86px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .menu svg {
+        transform: rotate(90deg);
+    }
+}
+
+@media all and (min-width: 1400px) {
+    .menu {
+        right: 94px;
+
+    }
+
+    .menu:hover {
+        background: rgba(51, 51, 51, 0.1);
+    }
+}

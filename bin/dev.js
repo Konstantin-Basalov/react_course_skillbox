@@ -1,11 +1,12 @@
-const webpack = require('webpack');
-const [webpackClientConfig, webpackServerConfig] = require('../webpack.config.js');
+import webpack from "webpack";
+import webpackConfigJs from '../webpack.config.js';
+const [webpackClientConfig, webpackServerConfig] = webpackConfigJs;
 
-const path = require('path');
-const nodemon = require('nodemon');
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
-const express = require('express')
+import { resolve } from 'path';
+import nodemon from 'nodemon';
+import webpackDevMiddleware from 'webpack-dev-middleware';
+import webpackHotMiddleware from 'webpack-hot-middleware';
+import express from 'express';
 
 const hmrServer = express();
 
@@ -47,10 +48,10 @@ const compiler = webpack(webpackServerConfig);
     });
 
     nodemon({
-        script: path.resolve(__dirname, '../dist/server/server.js'),
+        script: resolve(__dirname, '../dist/server/server.js'),
         watch: [
-            path.resolve(__dirname, '../dist/server'),
-            path.resolve(__dirname, '../dist/client')
+            resolve(__dirname, '../dist/server'),
+            resolve(__dirname, '../dist/client')
         ]
     });
 // });
