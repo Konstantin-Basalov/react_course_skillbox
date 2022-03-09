@@ -1,9 +1,8 @@
-import webpack from "webpack";
-import webpackConfigJs from '../webpack.config.js';
-const [webpackClientConfig, webpackServerConfig] = webpackConfigJs;
-
-import { resolve } from 'path';
+import webpack from 'webpack';
+import webpackConfig from '../webpack.config';
+const [webpackClientConfig, webpackServerConfig] = webpackConfig;
 import nodemon from 'nodemon';
+import { resolve } from 'path';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import express from 'express';
