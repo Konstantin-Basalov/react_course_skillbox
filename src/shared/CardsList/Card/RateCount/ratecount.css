@@ -1,0 +1,53 @@
+
+.rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rate button {
+    display: flex;
+    align-items: center;
+}
+
+.rate_counter {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--grayC4);
+    margin: 0 4px;
+}
+
+.rate_button_up {
+
+}
+
+.rate_button_down {
+    transform: rotate(180deg);
+}
+
+@media all and (min-width: 768px) {
+
+    .rate {
+        flex-direction: column;
+    }
+
+    .rate_counter {
+        margin: 7px 0;
+    }
+
+}
+
+@media all and (min-width: 1024px) {
+    .rate_button_up:hover > svg > path {
+        fill: var(--green);
+    }
+
+    .rate_button_down:hover > svg > path {
+        fill: var(--orange);
+    }
+
+
+}
